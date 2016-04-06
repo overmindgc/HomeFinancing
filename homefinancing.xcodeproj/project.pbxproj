@@ -20,8 +20,13 @@
 		7B169A0E1C78021A008F850C /* IMG_0571.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 7B169A061C78021A008F850C /* IMG_0571.PNG */; };
 		7B169A0F1C78021A008F850C /* IMG_0572.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 7B169A071C78021A008F850C /* IMG_0572.PNG */; };
 		7B169A111C780A6F008F850C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B169A101C780A6F008F850C /* HomeViewController.swift */; };
-		7B169A1B1C7862D7008F850C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B169A1A1C7862D7008F850C /* UIColorExtension.swift */; };
 		7B169A1D1C78699B008F850C /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B169A1C1C78699B008F850C /* AppColor.swift */; };
+		B770E4E11CB502280091732C /* AppConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E01CB502280091732C /* AppConsts.swift */; };
+		B770E4E31CB507300091732C /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E21CB507300091732C /* AppFont.swift */; };
+		B770E4E51CB50A490091732C /* HFBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E41CB50A490091732C /* HFBaseTableView.swift */; };
+		B770E4E81CB50CBE0091732C /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E71CB50CBE0091732C /* KDCircularProgress.swift */; };
+		B770E4EA1CB510B30091732C /* HFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E91CB510B30091732C /* HFTableViewCell.swift */; };
+		B770E4EC1CB511AA0091732C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4EB1CB511AA0091732C /* HomeTableViewCell.swift */; };
 		B7EDDB6E1C9A87830023DD9C /* HFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EDDB6D1C9A87830023DD9C /* HFBaseViewController.swift */; };
 		B7EDDB741C9BD9500023DD9C /* BigAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EDDB731C9BD9500023DD9C /* BigAddButton.swift */; };
 /* End PBXBuildFile section */
@@ -42,8 +47,13 @@
 		7B169A061C78021A008F850C /* IMG_0571.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0571.PNG; sourceTree = "<group>"; };
 		7B169A071C78021A008F850C /* IMG_0572.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0572.PNG; sourceTree = "<group>"; };
 		7B169A101C780A6F008F850C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		7B169A1A1C7862D7008F850C /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		7B169A1C1C78699B008F850C /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		B770E4E01CB502280091732C /* AppConsts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConsts.swift; sourceTree = "<group>"; };
+		B770E4E21CB507300091732C /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		B770E4E41CB50A490091732C /* HFBaseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFBaseTableView.swift; sourceTree = "<group>"; };
+		B770E4E71CB50CBE0091732C /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
+		B770E4E91CB510B30091732C /* HFTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFTableViewCell.swift; sourceTree = "<group>"; };
+		B770E4EB1CB511AA0091732C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		B7EDDB6D1C9A87830023DD9C /* HFBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFBaseViewController.swift; sourceTree = "<group>"; };
 		B7EDDB731C9BD9500023DD9C /* BigAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigAddButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +91,7 @@
 				7B169A121C785B50008F850C /* Images */,
 				B7EDDB701C9BD8820023DD9C /* Public */,
 				B7EDDB6F1C9BD8680023DD9C /* Sections */,
+				B770E4E61CB50C9A0091732C /* Verdors */,
 				7B1699EE1C77FFEE008F850C /* AppDelegate.swift */,
 				7B1699F21C77FFEE008F850C /* Main.storyboard */,
 				7B1699F51C77FFEE008F850C /* Assets.xcassets */,
@@ -108,16 +119,34 @@
 		7B169A131C785BEA008F850C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				7B169A1A1C7862D7008F850C /* UIColorExtension.swift */,
 				7B169A1C1C78699B008F850C /* AppColor.swift */,
+				B770E4E21CB507300091732C /* AppFont.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		B770E4DF1CB502160091732C /* Consts */ = {
+			isa = PBXGroup;
+			children = (
+				B770E4E01CB502280091732C /* AppConsts.swift */,
+			);
+			name = Consts;
+			sourceTree = "<group>";
+		};
+		B770E4E61CB50C9A0091732C /* Verdors */ = {
+			isa = PBXGroup;
+			children = (
+				B770E4E71CB50CBE0091732C /* KDCircularProgress.swift */,
+			);
+			name = Verdors;
 			sourceTree = "<group>";
 		};
 		B7EDDB6C1C9A875F0023DD9C /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				B7EDDB6D1C9A87830023DD9C /* HFBaseViewController.swift */,
+				B770E4E41CB50A490091732C /* HFBaseTableView.swift */,
+				B770E4E91CB510B30091732C /* HFTableViewCell.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -135,6 +164,7 @@
 		B7EDDB701C9BD8820023DD9C /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				B770E4DF1CB502160091732C /* Consts */,
 				B7EDDB6C1C9A875F0023DD9C /* Base */,
 				7B169A131C785BEA008F850C /* Utils */,
 			);
@@ -152,6 +182,7 @@
 		B7EDDB721C9BD9210023DD9C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				B770E4EB1CB511AA0091732C /* HomeTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -235,12 +266,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B770E4E81CB50CBE0091732C /* KDCircularProgress.swift in Sources */,
 				7B1699EF1C77FFEE008F850C /* AppDelegate.swift in Sources */,
+				B770E4E11CB502280091732C /* AppConsts.swift in Sources */,
+				B770E4E31CB507300091732C /* AppFont.swift in Sources */,
 				7B169A1D1C78699B008F850C /* AppColor.swift in Sources */,
+				B770E4EC1CB511AA0091732C /* HomeTableViewCell.swift in Sources */,
+				B770E4E51CB50A490091732C /* HFBaseTableView.swift in Sources */,
 				B7EDDB741C9BD9500023DD9C /* BigAddButton.swift in Sources */,
+				B770E4EA1CB510B30091732C /* HFTableViewCell.swift in Sources */,
 				B7EDDB6E1C9A87830023DD9C /* HFBaseViewController.swift in Sources */,
 				7B169A111C780A6F008F850C /* HomeViewController.swift in Sources */,
-				7B169A1B1C7862D7008F850C /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
