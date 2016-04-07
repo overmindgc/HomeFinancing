@@ -10,10 +10,15 @@ import UIKit
 
 class HomeViewController: HFBaseViewController,UITableViewDelegate,UITableViewDataSource {
 
+    let tableCellIndentifierDate = "tableCellIndentifierDate"
+    let tableCellIndentifierItem = "tableCellIndentifierItem"
+    
     @IBOutlet weak var tableView: HFBaseTableView!
     @IBOutlet weak var payLabel: UILabel!
     @IBOutlet weak var incomeLabel: UILabel!
     @IBOutlet weak var topCenterView: UIButton!
+    
+    var progress:KDCircularProgress!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +27,7 @@ class HomeViewController: HFBaseViewController,UITableViewDelegate,UITableViewDa
         payLabel.adjustsFontSizeToFitWidth = true;
         incomeLabel.adjustsFontSizeToFitWidth = true;
         
-        let progress = KDCircularProgress(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        progress = KDCircularProgress(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         progress.startAngle = -90
         progress.progressThickness = 0.35
         progress.trackThickness = 0.35
@@ -34,6 +39,11 @@ class HomeViewController: HFBaseViewController,UITableViewDelegate,UITableViewDa
         progress.setColors(appIncomeColor)
         progress.trackColor = appLitePayColor
         topCenterView.addSubview(progress)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        progress.angle = 275
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,27 +57,46 @@ class HomeViewController: HFBaseViewController,UITableViewDelegate,UITableViewDa
     }
     //每一块有多少行
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 30
     }
     //绘制cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let initIdentifier = "Cell"
-        let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: initIdentifier)
+        let row = indexPath.row
         
-        cell.accessoryType = UITableViewCellAccessoryType.None
-        //下面两个属性对应subtitle
-        cell.textLabel?.text = "测试"
-        
-        return cell
+        if row % 3 == 0 {
+            let dateCell = HomeDateCell(style: UITableViewCellStyle.Default, reuseIdentifier: tableCellIndentifierDate)
+            dateCell.accessoryType = UITableViewCellAccessoryType.None
+            dateCell.payMoneyLabel.text = "￥150"
+            dateCell.dateLabel.text = "\(row + 1)日"
+            dateCell.incomeMoneyLabel.text = "￥1000"
+            return dateCell
+        } else {
+            let itemCell = HomeItemCell(style: UITableViewCellStyle.Default, reuseIdentifier: tableCellIndentifierItem)
+            itemCell.accessoryType = UITableViewCellAccessoryType.None
+            if row % 2 == 0 {
+                itemCell.currentType = PayIncomeType.Pay
+            } else {
+                itemCell.currentType = PayIncomeType.Income
+            }
+            itemCell.payLabel.text = "￥150 日用品"
+            itemCell.incomeLabel.text = "奖金 ￥1000"
+            return itemCell
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        let currCell:HFTableViewCell = tableView.cellForRowAtIndexPath(indexPath) as! HFTableViewCell
+        currCell.selected = false
     }
     
     //每个cell的高度
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50
+        let row = indexPath.row
+        if row % 3 == 0 {
+            return dateCellHeight
+        } else {
+            return colorCellHeight
+        }
     }
     
     

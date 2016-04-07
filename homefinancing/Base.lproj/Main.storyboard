@@ -163,15 +163,8 @@
                                     <constraint firstAttribute="trailing" secondItem="lvU-zx-ohc" secondAttribute="trailing" constant="45" id="cwJ-Ad-Tjh"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="meu-yE-5l5" userLabel="LineView">
-                                <rect key="frame" x="-8" y="464" width="336" height="1"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="uqP-KO-0VB"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HwZ-bn-Num" customClass="HFBaseTableView" customModule="homefinancing" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="125" width="328" height="340"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HwZ-bn-Num" customClass="HFBaseTableView" customModule="homefinancing" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="123" width="320" height="342"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -205,12 +198,12 @@
                                     <constraint firstAttribute="height" constant="21" id="jhv-E3-urD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <color key="textColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0c2-Fu-OIb" userLabel="lineView2">
                                 <rect key="frame" x="60" y="122" width="200" height="1"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="fkT-dl-0eQ"/>
                                     <constraint firstAttribute="width" constant="200" id="vdX-xY-RnZ"/>
@@ -220,27 +213,36 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="HwZ-bn-Num" firstAttribute="leading" secondItem="fXW-JQ-NQ2" secondAttribute="leadingMargin" constant="-20" id="1oY-FF-OsM"/>
                             <constraint firstItem="0c2-Fu-OIb" firstAttribute="top" secondItem="inG-pF-c1Z" secondAttribute="bottom" id="2Iw-xu-rxw"/>
                             <constraint firstItem="6VY-sr-JNF" firstAttribute="leading" secondItem="fXW-JQ-NQ2" secondAttribute="leadingMargin" constant="-20" id="6nF-7e-E2h"/>
                             <constraint firstItem="rJ0-SK-CaT" firstAttribute="centerX" secondItem="fXW-JQ-NQ2" secondAttribute="centerX" id="7GD-9P-edA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gxt-gf-shh" secondAttribute="trailing" constant="-20" id="8z2-3U-ZPH"/>
                             <constraint firstItem="inG-pF-c1Z" firstAttribute="top" secondItem="6VY-sr-JNF" secondAttribute="bottom" constant="1" id="Cxk-iX-JSl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="meu-yE-5l5" secondAttribute="trailing" constant="-24" id="M2G-dz-qff"/>
                             <constraint firstItem="inG-pF-c1Z" firstAttribute="leading" secondItem="fXW-JQ-NQ2" secondAttribute="leadingMargin" constant="-20" id="PMd-9n-NJ0"/>
-                            <constraint firstItem="HwZ-bn-Num" firstAttribute="top" secondItem="6VY-sr-JNF" secondAttribute="bottom" constant="25" id="TtV-Yz-ayq"/>
-                            <constraint firstItem="meu-yE-5l5" firstAttribute="leading" secondItem="fXW-JQ-NQ2" secondAttribute="leadingMargin" constant="-24" id="WP4-EK-TCB"/>
                             <constraint firstItem="6VY-sr-JNF" firstAttribute="top" secondItem="cMk-La-aku" secondAttribute="bottom" id="ZSJ-f1-6iR"/>
                             <constraint firstItem="Yr1-KR-ZBG" firstAttribute="top" secondItem="rJ0-SK-CaT" secondAttribute="bottom" constant="-42" id="bJU-Bp-Amo"/>
-                            <constraint firstItem="meu-yE-5l5" firstAttribute="top" secondItem="HwZ-bn-Num" secondAttribute="bottom" constant="-1" id="gYZ-i2-ESk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HwZ-bn-Num" secondAttribute="trailing" id="ba6-Ap-1im"/>
+                            <constraint firstAttribute="trailing" secondItem="HwZ-bn-Num" secondAttribute="trailing" id="cgH-U9-e9E"/>
+                            <constraint firstItem="HwZ-bn-Num" firstAttribute="centerX" secondItem="fXW-JQ-NQ2" secondAttribute="centerX" id="eUM-vM-BnU"/>
+                            <constraint firstItem="HwZ-bn-Num" firstAttribute="leading" secondItem="fXW-JQ-NQ2" secondAttribute="leading" id="hHh-HE-qBS"/>
                             <constraint firstItem="0c2-Fu-OIb" firstAttribute="centerX" secondItem="fXW-JQ-NQ2" secondAttribute="centerX" id="hPC-wU-Tmd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HwZ-bn-Num" secondAttribute="trailing" constant="-20" id="igw-yk-yDO"/>
                             <constraint firstItem="Gxt-gf-shh" firstAttribute="top" secondItem="HwZ-bn-Num" secondAttribute="bottom" id="lut-I3-nnV"/>
+                            <constraint firstItem="HwZ-bn-Num" firstAttribute="leading" secondItem="fXW-JQ-NQ2" secondAttribute="leadingMargin" id="m2x-Su-CVJ"/>
+                            <constraint firstItem="Gxt-gf-shh" firstAttribute="top" secondItem="HwZ-bn-Num" secondAttribute="bottom" id="oAN-vQ-joS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6VY-sr-JNF" secondAttribute="trailing" constant="-20" id="pcx-OG-J0i"/>
                             <constraint firstItem="Gxt-gf-shh" firstAttribute="leading" secondItem="fXW-JQ-NQ2" secondAttribute="leadingMargin" constant="-20" id="psg-4z-iO0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="inG-pF-c1Z" secondAttribute="trailing" constant="-20" id="twa-5c-foR"/>
+                            <constraint firstItem="HwZ-bn-Num" firstAttribute="top" secondItem="0c2-Fu-OIb" secondAttribute="bottom" id="zSA-aQ-tZD"/>
                             <constraint firstItem="Yr1-KR-ZBG" firstAttribute="top" secondItem="Gxt-gf-shh" secondAttribute="bottom" constant="-1" id="zp8-Bb-3Ga"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ba6-Ap-1im"/>
+                                <exclude reference="eUM-vM-BnU"/>
+                                <exclude reference="m2x-Su-CVJ"/>
+                                <exclude reference="lut-I3-nnV"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="kcA-TF-Kci">
@@ -253,8 +255,8 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016年11月" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUG-ns-9D1">
-                                    <rect key="frame" x="17" y="8" width="94" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <rect key="frame" x="17" y="7.5" width="94" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>

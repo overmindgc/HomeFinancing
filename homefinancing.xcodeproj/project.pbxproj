@@ -26,7 +26,8 @@
 		B770E4E51CB50A490091732C /* HFBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E41CB50A490091732C /* HFBaseTableView.swift */; };
 		B770E4E81CB50CBE0091732C /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E71CB50CBE0091732C /* KDCircularProgress.swift */; };
 		B770E4EA1CB510B30091732C /* HFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E91CB510B30091732C /* HFTableViewCell.swift */; };
-		B770E4EC1CB511AA0091732C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4EB1CB511AA0091732C /* HomeTableViewCell.swift */; };
+		B770E4EC1CB511AA0091732C /* HomeDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4EB1CB511AA0091732C /* HomeDateCell.swift */; };
+		B770E4EE1CB6033F0091732C /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4ED1CB6033F0091732C /* HomeItemCell.swift */; };
 		B7EDDB6E1C9A87830023DD9C /* HFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EDDB6D1C9A87830023DD9C /* HFBaseViewController.swift */; };
 		B7EDDB741C9BD9500023DD9C /* BigAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EDDB731C9BD9500023DD9C /* BigAddButton.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +54,8 @@
 		B770E4E41CB50A490091732C /* HFBaseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFBaseTableView.swift; sourceTree = "<group>"; };
 		B770E4E71CB50CBE0091732C /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		B770E4E91CB510B30091732C /* HFTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFTableViewCell.swift; sourceTree = "<group>"; };
-		B770E4EB1CB511AA0091732C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		B770E4EB1CB511AA0091732C /* HomeDateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDateCell.swift; sourceTree = "<group>"; };
+		B770E4ED1CB6033F0091732C /* HomeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
 		B7EDDB6D1C9A87830023DD9C /* HFBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFBaseViewController.swift; sourceTree = "<group>"; };
 		B7EDDB731C9BD9500023DD9C /* BigAddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigAddButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,7 +184,8 @@
 		B7EDDB721C9BD9210023DD9C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				B770E4EB1CB511AA0091732C /* HomeTableViewCell.swift */,
+				B770E4EB1CB511AA0091732C /* HomeDateCell.swift */,
+				B770E4ED1CB6033F0091732C /* HomeItemCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -271,10 +274,11 @@
 				B770E4E11CB502280091732C /* AppConsts.swift in Sources */,
 				B770E4E31CB507300091732C /* AppFont.swift in Sources */,
 				7B169A1D1C78699B008F850C /* AppColor.swift in Sources */,
-				B770E4EC1CB511AA0091732C /* HomeTableViewCell.swift in Sources */,
+				B770E4EC1CB511AA0091732C /* HomeDateCell.swift in Sources */,
 				B770E4E51CB50A490091732C /* HFBaseTableView.swift in Sources */,
 				B7EDDB741C9BD9500023DD9C /* BigAddButton.swift in Sources */,
 				B770E4EA1CB510B30091732C /* HFTableViewCell.swift in Sources */,
+				B770E4EE1CB6033F0091732C /* HomeItemCell.swift in Sources */,
 				B7EDDB6E1C9A87830023DD9C /* HFBaseViewController.swift in Sources */,
 				7B169A111C780A6F008F850C /* HomeViewController.swift in Sources */,
 			);
