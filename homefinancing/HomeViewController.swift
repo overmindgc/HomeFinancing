@@ -24,6 +24,11 @@ class HomeViewController: HFBaseViewController,UITableViewDelegate,UITableViewDa
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.barTintColor = appPayColor
+        self.navigationController?.title = "主页"
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        let colorDict:[String:AnyObject] = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = colorDict
+        
         payLabel.adjustsFontSizeToFitWidth = true;
         incomeLabel.adjustsFontSizeToFitWidth = true;
         
