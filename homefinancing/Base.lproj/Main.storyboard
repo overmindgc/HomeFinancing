@@ -138,7 +138,7 @@
                                 <rect key="frame" x="-4" y="465" width="328" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvU-zx-ohc">
-                                        <rect key="frame" x="263" y="10" width="20" height="20"/>
+                                        <rect key="frame" x="263" y="4" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="3To-GQ-5lN"/>
                                             <constraint firstAttribute="height" constant="20" id="Smy-eN-m04"/>
@@ -146,21 +146,37 @@
                                         <state key="normal" title="Button" image="line"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7f-9V-Mha">
-                                        <rect key="frame" x="45" y="10" width="20" height="20"/>
+                                        <rect key="frame" x="45" y="4" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="iEv-gh-lRw"/>
                                             <constraint firstAttribute="height" constant="20" id="lvg-IM-tD3"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="pie"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分布" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJ6-sI-4NO">
+                                        <rect key="frame" x="44" y="24" width="22" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <color key="textColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月趋势" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiG-y1-8YT">
+                                        <rect key="frame" x="257" y="24" width="33" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="y7f-9V-Mha" firstAttribute="centerY" secondItem="Gxt-gf-shh" secondAttribute="centerY" id="1cs-xe-hEF"/>
                                     <constraint firstItem="y7f-9V-Mha" firstAttribute="leading" secondItem="Gxt-gf-shh" secondAttribute="leading" constant="45" id="FL8-2g-CwY"/>
+                                    <constraint firstItem="yJ6-sI-4NO" firstAttribute="top" secondItem="y7f-9V-Mha" secondAttribute="bottom" id="Kyz-6m-HoV"/>
+                                    <constraint firstItem="lvU-zx-ohc" firstAttribute="top" secondItem="Gxt-gf-shh" secondAttribute="top" constant="4" id="MiH-aV-s2z"/>
                                     <constraint firstAttribute="height" constant="40" id="RGG-B1-o4I"/>
-                                    <constraint firstItem="lvU-zx-ohc" firstAttribute="centerY" secondItem="Gxt-gf-shh" secondAttribute="centerY" id="Vzp-3B-MMp"/>
+                                    <constraint firstItem="yJ6-sI-4NO" firstAttribute="centerX" secondItem="y7f-9V-Mha" secondAttribute="centerX" id="Yh2-5o-gB0"/>
+                                    <constraint firstItem="SiG-y1-8YT" firstAttribute="centerX" secondItem="lvU-zx-ohc" secondAttribute="centerX" id="bqp-g9-YhB"/>
                                     <constraint firstAttribute="trailing" secondItem="lvU-zx-ohc" secondAttribute="trailing" constant="45" id="cwJ-Ad-Tjh"/>
+                                    <constraint firstItem="y7f-9V-Mha" firstAttribute="top" secondItem="Gxt-gf-shh" secondAttribute="top" constant="4" id="lhR-S1-VhU"/>
+                                    <constraint firstItem="SiG-y1-8YT" firstAttribute="top" secondItem="lvU-zx-ohc" secondAttribute="bottom" id="mhe-GJ-ILP"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HwZ-bn-Num" customClass="HFBaseTableView" customModule="homefinancing" customModuleProvider="target">

@@ -33,8 +33,10 @@ class BudgetViewController: HFBaseViewController {
         setupButton.layer.cornerRadius = 17.5
         
         let circleFrame:CGRect = centerCicleView.frame
+        let cicrleWidth:CGFloat = 175
         let gap:CGFloat = 38
-        progress = KDCircularProgress(frame: CGRect(x: circleFrame.origin.x - gap, y: circleFrame.origin.y - gap - 1, width: circleFrame.size.width + gap*2, height: circleFrame.size.height + gap*2))
+        let progressX:CGFloat = SCREEN_WIDTH/2 - cicrleWidth/2 - gap/2
+        progress = KDCircularProgress(frame: CGRect(x: progressX, y: circleFrame.origin.y - gap - 1, width: circleFrame.size.width + gap*2, height: circleFrame.size.height + gap*2))
         progress.startAngle = -90
         progress.progressThickness = 0.2
         progress.trackThickness = 0.2
