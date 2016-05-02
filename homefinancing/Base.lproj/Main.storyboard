@@ -152,6 +152,9 @@
                                             <constraint firstAttribute="height" constant="20" id="lvg-IM-tD3"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="pie"/>
+                                        <connections>
+                                            <segue destination="XMc-Re-qaE" kind="show" identifier="pieChartShow" id="Tqq-GT-OXW"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分布" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJ6-sI-4NO">
                                         <rect key="frame" x="44" y="24" width="22" height="13.5"/>
@@ -317,6 +320,111 @@
             </objects>
             <point key="canvasLocation" x="180" y="522"/>
         </scene>
+        <!--Pie Chart Statistic View Controller-->
+        <scene sceneID="kgD-ld-j1i">
+            <objects>
+                <viewController id="XMc-Re-qaE" customClass="PieChartStatisticViewController" customModule="homefinancing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dtC-aI-xvm"/>
+                        <viewControllerLayoutGuide type="bottom" id="v49-8R-Bo8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tav-Fl-fcg">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlT-rA-cKi" customClass="PNPieChart">
+                                <rect key="frame" x="60" y="110" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="75k-7o-pAL"/>
+                                    <constraint firstAttribute="width" constant="200" id="wLm-Y4-FjQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXV-br-zWU">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuP-K7-JOI" userLabel="rightButton">
+                                        <rect key="frame" x="248" y="11" width="70" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Fdl-ZO-Xpa"/>
+                                            <constraint firstAttribute="height" constant="22" id="nDk-5E-p38"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="12月"/>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ku4-sC-9oF">
+                                        <rect key="frame" x="88" y="8" width="152" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="2Jm-hK-drn"/>
+                                            <constraint firstAttribute="width" constant="152" id="Ne9-Bm-fgp"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="月" width="50"/>
+                                            <segment title="周" width="50"/>
+                                            <segment title="年" width="50"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </segmentedControl>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left_big_3x" translatesAutoresizingMaskIntoConstraints="NO" id="oOo-DF-b7f">
+                                        <rect key="frame" x="13" y="12" width="12" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="sqA-sA-js3"/>
+                                            <constraint firstAttribute="width" constant="12" id="xLR-iK-trY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_big_3x" translatesAutoresizingMaskIntoConstraints="NO" id="buC-04-3E1">
+                                        <rect key="frame" x="303" y="12" width="12" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="HLJ-Ce-9sD"/>
+                                            <constraint firstAttribute="height" constant="20" id="oC5-yq-e3J"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nz4-wJ-fLJ" userLabel="leftButton">
+                                        <rect key="frame" x="11" y="11" width="70" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="LfQ-DR-Txu"/>
+                                            <constraint firstAttribute="height" constant="22" id="WaD-jP-jxb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="10月"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23921568627450981" green="0.73333333333333328" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Nz4-wJ-fLJ" firstAttribute="centerY" secondItem="BXV-br-zWU" secondAttribute="centerY" id="6c3-dc-wbB"/>
+                                    <constraint firstAttribute="trailing" secondItem="yuP-K7-JOI" secondAttribute="trailing" constant="10" id="Iw9-t3-rjq"/>
+                                    <constraint firstItem="Ku4-sC-9oF" firstAttribute="centerY" secondItem="BXV-br-zWU" secondAttribute="centerY" id="RYQ-XP-ICL"/>
+                                    <constraint firstAttribute="trailing" secondItem="buC-04-3E1" secondAttribute="trailing" constant="13" id="Sii-Ar-o96"/>
+                                    <constraint firstItem="yuP-K7-JOI" firstAttribute="centerY" secondItem="BXV-br-zWU" secondAttribute="centerY" id="Ug1-ag-SV7"/>
+                                    <constraint firstItem="oOo-DF-b7f" firstAttribute="leading" secondItem="BXV-br-zWU" secondAttribute="leading" constant="13" id="anJ-gu-YjU"/>
+                                    <constraint firstItem="Ku4-sC-9oF" firstAttribute="centerX" secondItem="BXV-br-zWU" secondAttribute="centerX" id="fmS-Tj-zZY"/>
+                                    <constraint firstAttribute="height" constant="44" id="gjn-dr-XGN"/>
+                                    <constraint firstItem="oOo-DF-b7f" firstAttribute="centerY" secondItem="BXV-br-zWU" secondAttribute="centerY" id="hTZ-xl-lQW"/>
+                                    <constraint firstItem="Nz4-wJ-fLJ" firstAttribute="leading" secondItem="BXV-br-zWU" secondAttribute="leading" constant="11" id="hor-gU-NHD"/>
+                                    <constraint firstItem="buC-04-3E1" firstAttribute="centerY" secondItem="BXV-br-zWU" secondAttribute="centerY" id="rlT-72-7kO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BXV-br-zWU" firstAttribute="top" secondItem="dtC-aI-xvm" secondAttribute="bottom" id="IV1-Gx-6WW"/>
+                            <constraint firstItem="BXV-br-zWU" firstAttribute="leading" secondItem="tav-Fl-fcg" secondAttribute="leadingMargin" constant="-20" id="LFP-r7-Uux"/>
+                            <constraint firstItem="mlT-rA-cKi" firstAttribute="top" secondItem="dtC-aI-xvm" secondAttribute="bottom" constant="110" id="TaK-2B-q87"/>
+                            <constraint firstItem="mlT-rA-cKi" firstAttribute="centerX" secondItem="tav-Fl-fcg" secondAttribute="centerX" id="va0-wc-g3v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BXV-br-zWU" secondAttribute="trailing" constant="-20" id="vej-Gz-xGK"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pieChartView" destination="mlT-rA-cKi" id="aPF-eV-QBm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9Q-Z8-TGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="834"/>
+        </scene>
         <!--预算-->
         <scene sceneID="wGK-D9-gF9">
             <objects>
@@ -448,16 +556,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ev-iq-bFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="643" y="387"/>
+            <point key="canvasLocation" x="659" y="181"/>
         </scene>
     </scenes>
     <resources>
         <image name="barget" width="26" height="19"/>
+        <image name="left_big_3x" width="12" height="20"/>
         <image name="left_small_3x" width="9" height="16"/>
         <image name="line" width="20" height="20"/>
         <image name="money" width="37" height="35"/>
         <image name="peoples" width="26" height="22"/>
         <image name="pie" width="20" height="19"/>
+        <image name="right_big_3x" width="12" height="20"/>
         <image name="right_small_3x" width="9" height="16"/>
     </resources>
 </document>

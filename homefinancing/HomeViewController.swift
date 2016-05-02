@@ -28,6 +28,7 @@ class HomeViewController: HFBaseViewController,UITableViewDelegate,UITableViewDa
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         let colorDict:[String:AnyObject] = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         self.navigationController?.navigationBar.titleTextAttributes = colorDict
+        self.navigationController?.navigationBar.hideBottomHairline()
         
         payLabel.adjustsFontSizeToFitWidth = true;
         incomeLabel.adjustsFontSizeToFitWidth = true;

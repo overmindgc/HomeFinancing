@@ -22,16 +22,12 @@
 @property (nonatomic) NSMutableArray *pointPath;       // Array of point path, one for each line
 @property (nonatomic) NSMutableArray *endPointsOfPath;      // Array of start and end points of each line path, one for each line
 
-@property (nonatomic) CABasicAnimation *pathAnimation; // will be set to nil if _displayAnimation is NO
-
 // display grade
 @property (nonatomic) NSMutableArray *gradeStringPaths;
 
 @end
 
 @implementation PNLineChart
-
-@synthesize pathAnimation = _pathAnimation;
 
 #pragma mark initialization
 
@@ -344,13 +340,18 @@
         pointLayer.path = pointPath.CGPath;
 
         [CATransaction begin];
+        CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        pathAnimation.duration = 1.0;
+        pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        pathAnimation.fromValue = @0.0f;
+        pathAnimation.toValue   = @1.0f;
 
-        [chartLine addAnimation:self.pathAnimation forKey:@"strokeEndAnimation"];
+        [chartLine addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
         chartLine.strokeEnd = 1.0;
 
         // if you want cancel the point animation, conment this code, the point will show immediately
         if (chartData.inflexionPointStyle != PNLineChartPointStyleNone) {
-            [pointLayer addAnimation:self.pathAnimation forKey:@"strokeEndAnimation"];
+            [pointLayer addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
         }
 
         [CATransaction commit];
@@ -753,8 +754,8 @@
     self.backgroundColor = [UIColor whiteColor];
     self.clipsToBounds   = YES;
     self.chartLineArray  = [NSMutableArray new];
-    _showLabel           = YES;
-    _showGenYLabels      = YES;
+    _showLabel            = YES;
+    _showGenYLabels        = YES;
     _pathPoints          = [[NSMutableArray alloc] init];
     _endPointsOfPath     = [[NSMutableArray alloc] init];
     self.userInteractionEnabled = YES;
@@ -787,6 +788,7 @@
 
 + (CGSize)sizeOfString:(NSString *)text withWidth:(float)width font:(UIFont *)font
 {
+    NSInteger ch;
     CGSize size = CGSizeMake(width, MAXFLOAT);
 
     if ([text respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) {
@@ -801,7 +803,8 @@
         size = [text sizeWithFont:font constrainedToSize:size lineBreakMode:NSLineBreakByCharWrapping];
 #pragma clang diagnostic pop
     }
- 
+    ch = size.height;
+
     return size;
 }
 
@@ -1041,26 +1044,12 @@
 
 -(CABasicAnimation*)fadeAnimation
 {
-    CABasicAnimation *fadeAnimation = nil;
-    if (self.displayAnimated) {
-        fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-        fadeAnimation.fromValue = [NSNumber numberWithFloat:0.0];
-        fadeAnimation.toValue = [NSNumber numberWithFloat:1.0];
-        fadeAnimation.duration = 2.0;
-    }
+    CABasicAnimation* fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    fadeAnimation.fromValue = [NSNumber numberWithFloat:0.0];
+    fadeAnimation.toValue = [NSNumber numberWithFloat:1.0];
+    fadeAnimation.duration = 2.0;
+    
     return fadeAnimation;
-}
-
--(CABasicAnimation *)pathAnimation
-{
-    if (self.displayAnimated && !_pathAnimation) {
-        _pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-        _pathAnimation.duration = 1.0;
-        _pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        _pathAnimation.fromValue = @0.0f;
-        _pathAnimation.toValue   = @1.0f;
-    }
-    return _pathAnimation;
 }
 
 @end
