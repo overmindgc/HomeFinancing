@@ -6,8 +6,6 @@
 //  Copyright © 2016年 wph. All rights reserved.
 //
 
-import UIKit
-
 class HomeViewController: HFBaseViewController,UITableViewDelegate,UITableViewDataSource {
 
     let tableCellIndentifierDate = "tableCellIndentifierDate"

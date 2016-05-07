@@ -6,9 +6,6 @@
 //  Copyright © 2016 wph. All rights reserved.
 //
 
-import Foundation
-import UIKit
-
 extension UINavigationBar {
     
     func hideBottomHairline() {

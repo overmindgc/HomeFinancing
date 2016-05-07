@@ -6,8 +6,6 @@
 //  Copyright © 2016 wph. All rights reserved.
 //
 
-import UIKit
-
 class HFBaseViewController: UIViewController {
 
     override func viewDidLoad() {

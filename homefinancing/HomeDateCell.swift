@@ -6,8 +6,6 @@
 //  Copyright © 2016 wph. All rights reserved.
 //
 
-import UIKit
-
 let dateCellHeight:CGFloat = 55
 
 class HomeDateCell: HFTableViewCell {

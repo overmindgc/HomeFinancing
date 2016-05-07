@@ -6,8 +6,6 @@
 //  Copyright © 2016年 wph. All rights reserved.
 //
 
-import UIKit
-
 let appPayColor = UIColor(red: 62/255, green: 187/255, blue: 157/255, alpha: 1.0);
 let appLitePayColor = UIColor(red: 62/255, green: 187/255, blue: 157/255, alpha: 0.3);
 

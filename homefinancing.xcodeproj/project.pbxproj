@@ -13,6 +13,22 @@
 		7B1699F91C77FFEE008F850C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1699F71C77FFEE008F850C /* LaunchScreen.storyboard */; };
 		7B169A111C780A6F008F850C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B169A101C780A6F008F850C /* HomeViewController.swift */; };
 		7B169A1D1C78699B008F850C /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B169A1C1C78699B008F850C /* AppColor.swift */; };
+		B7482F9D1CDDEF13007FFD64 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482F931CDDEF13007FFD64 /* FMDatabase.m */; };
+		B7482F9E1CDDEF13007FFD64 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482F951CDDEF13007FFD64 /* FMDatabaseAdditions.m */; };
+		B7482F9F1CDDEF13007FFD64 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482F971CDDEF13007FFD64 /* FMDatabasePool.m */; };
+		B7482FA01CDDEF13007FFD64 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482F991CDDEF13007FFD64 /* FMDatabaseQueue.m */; };
+		B7482FA11CDDEF13007FFD64 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482F9C1CDDEF13007FFD64 /* FMResultSet.m */; };
+		B7482FA71CDDEF5A007FFD64 /* FMDatabaseManagerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482FA41CDDEF5A007FFD64 /* FMDatabaseManagerClient.m */; };
+		B7482FA81CDDEF5A007FFD64 /* FMDatabaseQueueClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482FA61CDDEF5A007FFD64 /* FMDatabaseQueueClient.m */; };
+		B7482FAB1CDDF069007FFD64 /* GCBaseStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482FAA1CDDF069007FFD64 /* GCBaseStorage.m */; };
+		B7482FAE1CDDF144007FFD64 /* GCDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482FAD1CDDF144007FFD64 /* GCDBModel.m */; };
+		B7482FB01CDDF1F3007FFD64 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B7482FAF1CDDF1F3007FFD64 /* libsqlite3.0.tbd */; };
+		B7482FB31CDDF3B5007FFD64 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FB21CDDF3B5007FFD64 /* AccountModel.swift */; };
+		B7482FB51CDDF6B0007FFD64 /* AppEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FB41CDDF6B0007FFD64 /* AppEnums.swift */; };
+		B7482FB81CDDF7BD007FFD64 /* DBTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FB71CDDF7BD007FFD64 /* DBTableManager.swift */; };
+		B7482FBA1CDE0165007FFD64 /* NSUserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FB91CDE0165007FFD64 /* NSUserDefaultsExtension.swift */; };
+		B7482FBC1CDE2CB4007FFD64 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FBB1CDE2CB4007FFD64 /* CreateAccountViewController.swift */; };
+		B7482FC01CDE4564007FFD64 /* AccountTypeSquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FBF1CDE4564007FFD64 /* AccountTypeSquareButton.swift */; };
 		B770E4E11CB502280091732C /* AppConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E01CB502280091732C /* AppConsts.swift */; };
 		B770E4E31CB507300091732C /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E21CB507300091732C /* AppFont.swift */; };
 		B770E4E51CB50A490091732C /* HFBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E41CB50A490091732C /* HFBaseTableView.swift */; };
@@ -46,6 +62,32 @@
 		7B1699FA1C77FFEE008F850C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B169A101C780A6F008F850C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7B169A1C1C78699B008F850C /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		B7482F921CDDEF13007FFD64 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		B7482F931CDDEF13007FFD64 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		B7482F941CDDEF13007FFD64 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		B7482F951CDDEF13007FFD64 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		B7482F961CDDEF13007FFD64 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		B7482F971CDDEF13007FFD64 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		B7482F981CDDEF13007FFD64 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		B7482F991CDDEF13007FFD64 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		B7482F9A1CDDEF13007FFD64 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		B7482F9B1CDDEF13007FFD64 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		B7482F9C1CDDEF13007FFD64 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		B7482FA31CDDEF5A007FFD64 /* FMDatabaseManagerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseManagerClient.h; sourceTree = "<group>"; };
+		B7482FA41CDDEF5A007FFD64 /* FMDatabaseManagerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseManagerClient.m; sourceTree = "<group>"; };
+		B7482FA51CDDEF5A007FFD64 /* FMDatabaseQueueClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueueClient.h; sourceTree = "<group>"; };
+		B7482FA61CDDEF5A007FFD64 /* FMDatabaseQueueClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueueClient.m; sourceTree = "<group>"; };
+		B7482FA91CDDF069007FFD64 /* GCBaseStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCBaseStorage.h; sourceTree = "<group>"; };
+		B7482FAA1CDDF069007FFD64 /* GCBaseStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCBaseStorage.m; sourceTree = "<group>"; };
+		B7482FAC1CDDF144007FFD64 /* GCDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDBModel.h; sourceTree = "<group>"; };
+		B7482FAD1CDDF144007FFD64 /* GCDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDBModel.m; sourceTree = "<group>"; };
+		B7482FAF1CDDF1F3007FFD64 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		B7482FB21CDDF3B5007FFD64 /* AccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		B7482FB41CDDF6B0007FFD64 /* AppEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnums.swift; sourceTree = "<group>"; };
+		B7482FB71CDDF7BD007FFD64 /* DBTableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTableManager.swift; sourceTree = "<group>"; };
+		B7482FB91CDE0165007FFD64 /* NSUserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserDefaultsExtension.swift; sourceTree = "<group>"; };
+		B7482FBB1CDE2CB4007FFD64 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		B7482FBF1CDE4564007FFD64 /* AccountTypeSquareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTypeSquareButton.swift; sourceTree = "<group>"; };
 		B770E4E01CB502280091732C /* AppConsts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConsts.swift; sourceTree = "<group>"; };
 		B770E4E21CB507300091732C /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		B770E4E41CB50A490091732C /* HFBaseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFBaseTableView.swift; sourceTree = "<group>"; };
@@ -88,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7482FB01CDDF1F3007FFD64 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +140,7 @@
 		7B1699E21C77FFEE008F850C = {
 			isa = PBXGroup;
 			children = (
+				B7482FAF1CDDF1F3007FFD64 /* libsqlite3.0.tbd */,
 				7B1699ED1C77FFEE008F850C /* homefinancing */,
 				7B1699EC1C77FFEE008F850C /* Products */,
 			);
@@ -134,10 +178,61 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		B7482F911CDDEF13007FFD64 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				B7482F921CDDEF13007FFD64 /* FMDatabase.h */,
+				B7482F931CDDEF13007FFD64 /* FMDatabase.m */,
+				B7482F941CDDEF13007FFD64 /* FMDatabaseAdditions.h */,
+				B7482F951CDDEF13007FFD64 /* FMDatabaseAdditions.m */,
+				B7482F961CDDEF13007FFD64 /* FMDatabasePool.h */,
+				B7482F971CDDEF13007FFD64 /* FMDatabasePool.m */,
+				B7482F981CDDEF13007FFD64 /* FMDatabaseQueue.h */,
+				B7482F991CDDEF13007FFD64 /* FMDatabaseQueue.m */,
+				B7482F9A1CDDEF13007FFD64 /* FMDB.h */,
+				B7482F9B1CDDEF13007FFD64 /* FMResultSet.h */,
+				B7482F9C1CDDEF13007FFD64 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		B7482FA21CDDEF4D007FFD64 /* StorageBase */ = {
+			isa = PBXGroup;
+			children = (
+				B7482FA91CDDF069007FFD64 /* GCBaseStorage.h */,
+				B7482FAA1CDDF069007FFD64 /* GCBaseStorage.m */,
+				B7482FAC1CDDF144007FFD64 /* GCDBModel.h */,
+				B7482FAD1CDDF144007FFD64 /* GCDBModel.m */,
+				B7482FA31CDDEF5A007FFD64 /* FMDatabaseManagerClient.h */,
+				B7482FA41CDDEF5A007FFD64 /* FMDatabaseManagerClient.m */,
+				B7482FA51CDDEF5A007FFD64 /* FMDatabaseQueueClient.h */,
+				B7482FA61CDDEF5A007FFD64 /* FMDatabaseQueueClient.m */,
+			);
+			name = StorageBase;
+			sourceTree = "<group>";
+		};
+		B7482FB11CDDF2C9007FFD64 /* DBModel */ = {
+			isa = PBXGroup;
+			children = (
+				B7482FB21CDDF3B5007FFD64 /* AccountModel.swift */,
+			);
+			name = DBModel;
+			sourceTree = "<group>";
+		};
+		B7482FB61CDDF762007FFD64 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				B7482FB71CDDF7BD007FFD64 /* DBTableManager.swift */,
+			);
+			name = DBManager;
+			sourceTree = "<group>";
+		};
 		B770E4DF1CB502160091732C /* Consts */ = {
 			isa = PBXGroup;
 			children = (
 				B770E4E01CB502280091732C /* AppConsts.swift */,
+				B7482FB41CDDF6B0007FFD64 /* AppEnums.swift */,
 			);
 			name = Consts;
 			sourceTree = "<group>";
@@ -146,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				B7EE8E101CD782A000D4193F /* homefinancing-Bridging-Header.h */,
+				B7482FA21CDDEF4D007FFD64 /* StorageBase */,
+				B7482F911CDDEF13007FFD64 /* FMDB */,
 				B770E4F11CBCCD5C0091732C /* PNChart */,
 				B770E4E71CB50CBE0091732C /* KDCircularProgress.swift */,
 			);
@@ -194,11 +291,13 @@
 		B7EDDB6F1C9BD8680023DD9C /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				B7482FB11CDDF2C9007FFD64 /* DBModel */,
 				B7EDDB721C9BD9210023DD9C /* Cells */,
 				B7EDDB711C9BD8E10023DD9C /* UI */,
 				7B169A101C780A6F008F850C /* HomeViewController.swift */,
 				B770E4EF1CBB74890091732C /* BudgetViewController.swift */,
 				B7EE8E0E1CD781E000D4193F /* PieChartStatisticViewController.swift */,
+				B7482FBB1CDE2CB4007FFD64 /* CreateAccountViewController.swift */,
 			);
 			name = Sections;
 			sourceTree = "<group>";
@@ -210,6 +309,7 @@
 				B770E4DF1CB502160091732C /* Consts */,
 				B7EDDB6C1C9A875F0023DD9C /* Base */,
 				7B169A131C785BEA008F850C /* Utils */,
+				B7482FB61CDDF762007FFD64 /* DBManager */,
 			);
 			name = Public;
 			sourceTree = "<group>";
@@ -218,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				B7EDDB731C9BD9500023DD9C /* BigAddButton.swift */,
+				B7482FBF1CDE4564007FFD64 /* AccountTypeSquareButton.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -235,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				B7EE8E471CD7986700D4193F /* UIBarExtension.swift */,
+				B7482FB91CDE0165007FFD64 /* NSUserDefaultsExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -313,6 +415,7 @@
 				B7EE8E3A1CD78DA900D4193F /* PNColor.m in Sources */,
 				B7EE8E3E1CD78DA900D4193F /* PNLineChartDataItem.m in Sources */,
 				B7EE8E361CD78DA900D4193F /* PNBar.m in Sources */,
+				B7482FBA1CDE0165007FFD64 /* NSUserDefaultsExtension.swift in Sources */,
 				B7EE8E401CD78DA900D4193F /* PNPieChartDataItem.m in Sources */,
 				B770E4E81CB50CBE0091732C /* KDCircularProgress.swift in Sources */,
 				7B1699EF1C77FFEE008F850C /* AppDelegate.swift in Sources */,
@@ -321,20 +424,34 @@
 				B770E4E31CB507300091732C /* AppFont.swift in Sources */,
 				7B169A1D1C78699B008F850C /* AppColor.swift in Sources */,
 				B7EE8E3D1CD78DA900D4193F /* PNLineChartData.m in Sources */,
+				B7482FA71CDDEF5A007FFD64 /* FMDatabaseManagerClient.m in Sources */,
 				B770E4F01CBB74890091732C /* BudgetViewController.swift in Sources */,
 				B770E4EC1CB511AA0091732C /* HomeDateCell.swift in Sources */,
 				B770E4E51CB50A490091732C /* HFBaseTableView.swift in Sources */,
+				B7482FAE1CDDF144007FFD64 /* GCDBModel.m in Sources */,
 				B7EDDB741C9BD9500023DD9C /* BigAddButton.swift in Sources */,
+				B7482FBC1CDE2CB4007FFD64 /* CreateAccountViewController.swift in Sources */,
+				B7482F9D1CDDEF13007FFD64 /* FMDatabase.m in Sources */,
 				B770E4EA1CB510B30091732C /* HFTableViewCell.swift in Sources */,
 				B770E4EE1CB6033F0091732C /* HomeItemCell.swift in Sources */,
 				B7EE8E371CD78DA900D4193F /* PNBarChart.m in Sources */,
 				B7EDDB6E1C9A87830023DD9C /* HFBaseViewController.swift in Sources */,
+				B7482FB51CDDF6B0007FFD64 /* AppEnums.swift in Sources */,
+				B7482FAB1CDDF069007FFD64 /* GCBaseStorage.m in Sources */,
 				B7EE8E3B1CD78DA900D4193F /* PNGenericChart.m in Sources */,
 				B7EE8E0F1CD781E000D4193F /* PieChartStatisticViewController.swift in Sources */,
+				B7482FC01CDE4564007FFD64 /* AccountTypeSquareButton.swift in Sources */,
 				B7EE8E481CD7986700D4193F /* UIBarExtension.swift in Sources */,
+				B7482F9E1CDDEF13007FFD64 /* FMDatabaseAdditions.m in Sources */,
+				B7482FA11CDDEF13007FFD64 /* FMResultSet.m in Sources */,
 				B7EE8E3F1CD78DA900D4193F /* PNPieChart.m in Sources */,
+				B7482F9F1CDDEF13007FFD64 /* FMDatabasePool.m in Sources */,
+				B7482FB31CDDF3B5007FFD64 /* AccountModel.swift in Sources */,
 				B7EE8E381CD78DA900D4193F /* PNChartLabel.m in Sources */,
+				B7482FB81CDDF7BD007FFD64 /* DBTableManager.swift in Sources */,
 				7B169A111C780A6F008F850C /* HomeViewController.swift in Sources */,
+				B7482FA81CDDEF5A007FFD64 /* FMDatabaseQueueClient.m in Sources */,
+				B7482FA01CDDEF13007FFD64 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

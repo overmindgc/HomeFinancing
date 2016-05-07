@@ -6,8 +6,6 @@
 //  Copyright © 2016 wph. All rights reserved.
 //
 
-import UIKit
-
 class BudgetViewController: HFBaseViewController {
 
     @IBOutlet weak var monthBudgetLabel: UILabel!

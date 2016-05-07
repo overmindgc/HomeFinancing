@@ -6,8 +6,6 @@
 //  Copyright © 2016 wph. All rights reserved.
 //
 
-import UIKit
-
 func AppFont(size:CGFloat) -> UIFont {
     return UIFont.systemFontOfSize(size)
 }
