@@ -7,15 +7,15 @@
 //
 
 class AccountModel: GCDBModel {
-    var id:NSString?
+    var id:String?
     var bookId:String?
-    var accountDate:NSString?
-    var createDate:NSString?
-    var updateDate:NSString?
-    var typeId:NSString?
-    var typeName:NSString?
-    var amount:NSString?
-    var menberId:NSString?
-    var menberName:NSString?
-    var payOrIncome:NSString?
+    var accountDate:String?
+    var createDate:String?
+    var updateDate:String?
+    var typeId:String?
+    var typeName:String?
+    var amount:String?
+    var menberId:String?
+    var menberName:String?
+    var payOrIncome:String?
 }

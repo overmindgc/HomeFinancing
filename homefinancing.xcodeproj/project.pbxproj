@@ -29,6 +29,10 @@
 		B7482FBA1CDE0165007FFD64 /* NSUserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FB91CDE0165007FFD64 /* NSUserDefaultsExtension.swift */; };
 		B7482FBC1CDE2CB4007FFD64 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FBB1CDE2CB4007FFD64 /* CreateAccountViewController.swift */; };
 		B7482FC01CDE4564007FFD64 /* AccountTypeSquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FBF1CDE4564007FFD64 /* AccountTypeSquareButton.swift */; };
+		B7482FC21CDEE625007FFD64 /* AccountTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FC11CDEE625007FFD64 /* AccountTypeModel.swift */; };
+		B7482FC51CDEE74F007FFD64 /* DataStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FC41CDEE74F007FFD64 /* DataStorageService.swift */; };
+		B7482FC71CDF07B4007FFD64 /* AccountNumberPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FC61CDF07B4007FFD64 /* AccountNumberPad.swift */; };
+		B7482FC91CDF203A007FFD64 /* NumPadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7482FC81CDF203A007FFD64 /* NumPadButton.swift */; };
 		B770E4E11CB502280091732C /* AppConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E01CB502280091732C /* AppConsts.swift */; };
 		B770E4E31CB507300091732C /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E21CB507300091732C /* AppFont.swift */; };
 		B770E4E51CB50A490091732C /* HFBaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B770E4E41CB50A490091732C /* HFBaseTableView.swift */; };
@@ -88,6 +92,10 @@
 		B7482FB91CDE0165007FFD64 /* NSUserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserDefaultsExtension.swift; sourceTree = "<group>"; };
 		B7482FBB1CDE2CB4007FFD64 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		B7482FBF1CDE4564007FFD64 /* AccountTypeSquareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTypeSquareButton.swift; sourceTree = "<group>"; };
+		B7482FC11CDEE625007FFD64 /* AccountTypeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTypeModel.swift; sourceTree = "<group>"; };
+		B7482FC41CDEE74F007FFD64 /* DataStorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorageService.swift; sourceTree = "<group>"; };
+		B7482FC61CDF07B4007FFD64 /* AccountNumberPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountNumberPad.swift; sourceTree = "<group>"; };
+		B7482FC81CDF203A007FFD64 /* NumPadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumPadButton.swift; sourceTree = "<group>"; };
 		B770E4E01CB502280091732C /* AppConsts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConsts.swift; sourceTree = "<group>"; };
 		B770E4E21CB507300091732C /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		B770E4E41CB50A490091732C /* HFBaseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFBaseTableView.swift; sourceTree = "<group>"; };
@@ -216,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				B7482FB21CDDF3B5007FFD64 /* AccountModel.swift */,
+				B7482FC11CDEE625007FFD64 /* AccountTypeModel.swift */,
 			);
 			name = DBModel;
 			sourceTree = "<group>";
@@ -226,6 +235,14 @@
 				B7482FB71CDDF7BD007FFD64 /* DBTableManager.swift */,
 			);
 			name = DBManager;
+			sourceTree = "<group>";
+		};
+		B7482FC31CDEE6A9007FFD64 /* StorageService */ = {
+			isa = PBXGroup;
+			children = (
+				B7482FC41CDEE74F007FFD64 /* DataStorageService.swift */,
+			);
+			name = StorageService;
 			sourceTree = "<group>";
 		};
 		B770E4DF1CB502160091732C /* Consts */ = {
@@ -291,6 +308,7 @@
 		B7EDDB6F1C9BD8680023DD9C /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				B7482FC31CDEE6A9007FFD64 /* StorageService */,
 				B7482FB11CDDF2C9007FFD64 /* DBModel */,
 				B7EDDB721C9BD9210023DD9C /* Cells */,
 				B7EDDB711C9BD8E10023DD9C /* UI */,
@@ -319,6 +337,8 @@
 			children = (
 				B7EDDB731C9BD9500023DD9C /* BigAddButton.swift */,
 				B7482FBF1CDE4564007FFD64 /* AccountTypeSquareButton.swift */,
+				B7482FC61CDF07B4007FFD64 /* AccountNumberPad.swift */,
+				B7482FC81CDF203A007FFD64 /* NumPadButton.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -437,8 +457,11 @@
 				B7EE8E371CD78DA900D4193F /* PNBarChart.m in Sources */,
 				B7EDDB6E1C9A87830023DD9C /* HFBaseViewController.swift in Sources */,
 				B7482FB51CDDF6B0007FFD64 /* AppEnums.swift in Sources */,
+				B7482FC21CDEE625007FFD64 /* AccountTypeModel.swift in Sources */,
+				B7482FC91CDF203A007FFD64 /* NumPadButton.swift in Sources */,
 				B7482FAB1CDDF069007FFD64 /* GCBaseStorage.m in Sources */,
 				B7EE8E3B1CD78DA900D4193F /* PNGenericChart.m in Sources */,
+				B7482FC71CDF07B4007FFD64 /* AccountNumberPad.swift in Sources */,
 				B7EE8E0F1CD781E000D4193F /* PieChartStatisticViewController.swift in Sources */,
 				B7482FC01CDE4564007FFD64 /* AccountTypeSquareButton.swift in Sources */,
 				B7EE8E481CD7986700D4193F /* UIBarExtension.swift in Sources */,
@@ -452,6 +475,7 @@
 				7B169A111C780A6F008F850C /* HomeViewController.swift in Sources */,
 				B7482FA81CDDEF5A007FFD64 /* FMDatabaseQueueClient.m in Sources */,
 				B7482FA01CDDEF13007FFD64 /* FMDatabaseQueue.m in Sources */,
+				B7482FC51CDEE74F007FFD64 /* DataStorageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
