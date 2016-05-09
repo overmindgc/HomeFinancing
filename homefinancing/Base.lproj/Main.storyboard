@@ -418,9 +418,6 @@
                                 <rect key="frame" x="272" y="64" width="1" height="29"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2R-TO-vBA">
-                                <rect key="frame" x="0.0" y="92" width="320" height="476"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -429,11 +426,7 @@
                             <constraint firstItem="S9Y-SA-amY" firstAttribute="top" secondItem="zek-2Q-brj" secondAttribute="top" id="BQg-gC-5zB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0HV-Tt-hna" secondAttribute="trailing" constant="-20" id="EA7-HN-rAb"/>
                             <constraint firstItem="S9Y-SA-amY" firstAttribute="leading" secondItem="zek-2Q-brj" secondAttribute="leading" id="KXW-5l-QG9"/>
-                            <constraint firstItem="u95-dh-oIH" firstAttribute="top" secondItem="q2R-TO-vBA" secondAttribute="bottom" id="Umu-n7-PgG"/>
                             <constraint firstItem="0HV-Tt-hna" firstAttribute="top" secondItem="S9Y-SA-amY" secondAttribute="bottom" constant="28" id="WQY-oG-N8v"/>
-                            <constraint firstItem="q2R-TO-vBA" firstAttribute="leading" secondItem="zek-2Q-brj" secondAttribute="leading" id="Yym-ta-SQg"/>
-                            <constraint firstItem="q2R-TO-vBA" firstAttribute="top" secondItem="S9Y-SA-amY" secondAttribute="bottom" constant="28" id="eGC-fH-EvC"/>
-                            <constraint firstAttribute="trailing" secondItem="q2R-TO-vBA" secondAttribute="trailing" id="sBO-v9-jtP"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -442,11 +435,11 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="dateButton" destination="Cot-xg-cc7" id="2jO-0q-eGe"/>
+                        <outlet property="horSeparateLine" destination="0HV-Tt-hna" id="OOh-ma-Qrf"/>
                         <outlet property="incomeTipLabel" destination="jnX-Fu-fhC" id="W4q-Ed-S0e"/>
                         <outlet property="menberButton" destination="qf3-J7-qtM" id="vJN-uN-OXd"/>
                         <outlet property="payTipLabel" destination="H8N-m8-1mL" id="h0L-Bz-mMz"/>
                         <outlet property="remarkButton" destination="peI-uh-FeK" id="bi3-Bm-nsq"/>
-                        <outlet property="scrollView" destination="q2R-TO-vBA" id="NJw-Tc-31s"/>
                         <outlet property="separateLine" destination="MUg-my-QUS" id="2C7-6b-kdO"/>
                     </connections>
                 </viewController>

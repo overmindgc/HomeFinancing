@@ -21,6 +21,6 @@ class NumPadButton: UIButton {
     func initViews() {
         self.backgroundColor = appDarkBackgroundColor
         self.titleLabel?.font = UIFont.boldSystemFontOfSize(25)
-        self.setBackgroundImage(UIImage(named: "button_selected_bg"), forState: UIControlState.Highlighted)
+        self.setBackgroundImage(UIImage(named: "dark_selected_bg"), forState: UIControlState.Highlighted)
     }
 }

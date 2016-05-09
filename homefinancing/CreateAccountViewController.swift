@@ -15,8 +15,9 @@ class CreateAccountViewController: HFBaseViewController {
     @IBOutlet weak var payTipLabel: UILabel!
     @IBOutlet weak var incomeTipLabel: UILabel!
     @IBOutlet weak var separateLine: UIView!
+    @IBOutlet weak var horSeparateLine: UIView!
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    var scrollView: UIScrollView!
     
     var payTypeButtonArray:Array<AccountTypeSquareButton> = []
     var incomeTypeButtonArray:Array<AccountTypeSquareButton> = []
@@ -33,6 +34,12 @@ class CreateAccountViewController: HFBaseViewController {
         menberButton.layer.borderColor = UIColor.whiteColor().CGColor
         menberButton.layer.cornerRadius = 5
         menberButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        let scrollViewHeight:CGFloat = SCREEN_HEIGHT - AccountNumberPad.padHeight - horSeparateLine.frame.origin.y
+        scrollView = UIScrollView(frame: CGRectMake(0,horSeparateLine.frame.origin.y + 1,SCREEN_WIDTH, scrollViewHeight))
+        scrollView.showsVerticalScrollIndicator = true
+        scrollView.alwaysBounceVertical = true
+        self.view.addSubview(scrollView)
         
         initAccountTypeButtons()
         initNumberPadView()
@@ -101,6 +108,14 @@ class CreateAccountViewController: HFBaseViewController {
             incomeTypeButtonArray.append(incomeButton)
         }
         
+        let payLine:Int = payModelArray.count / 3
+        let incomeLine:Int = incomeModelArray.count
+        var maxLine:Int = payLine
+        if payLine < incomeLine {
+            maxLine = incomeLine
+        }
+        
+        scrollView.contentSize = CGSizeMake(SCREEN_WIDTH, CGFloat(maxLine) * AccountTypeSquareButton.buttonHeight + CGFloat(maxLine) * AccountTypeSquareButton.buttonPadding + paddingTop)
     }
     
     func initNumberPadView() {
