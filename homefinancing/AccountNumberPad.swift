@@ -18,13 +18,11 @@ class AccountNumberPad: UIView {
     var topBarLabel:UILabel?
     var resultLabel:UILabel?
     
+    var confirmButton:NumPadButton?
+    
     var resultText:String = ""
     
-    let plusTag = 1001
-    let minusTag = 1002
-    let multiplyTag = 1003
-    let confirmTag = 1004
-    let deleteTag = 1005
+    let buttonTag = (plusTag: 1001,minusTag: 1002,multiplyTag: 1003,confirmTag: 1004,deleteTag: 1005)
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -94,7 +92,7 @@ class AccountNumberPad: UIView {
             
             if index == 12 {
                 let backButton:NumPadButton = NumPadButton(frame: CGRectMake(numSqX,numSqY,AccountNumberPad.numberSqWidth,AccountNumberPad.numberSqHeight))
-                backButton.tag = deleteTag
+                backButton.tag = buttonTag.deleteTag
                 backButton.setImage(UIImage(named: "delete_num"), forState: UIControlState.Normal)
                 backButton.addTarget(self, action: #selector(self.buttonClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
                 self.addSubview(backButton)
@@ -112,22 +110,23 @@ class AccountNumberPad: UIView {
             let operateButton = NumPadButton(frame: CGRectMake(sqX,sqY,AccountNumberPad.operatorSqWidth,AccountNumberPad.numberSqHeight))
             switch index {
             case 0:
-                operateButton.tag = plusTag
+                operateButton.tag = buttonTag.plusTag
                 operateButton.titleLabel?.font = UIFont.boldSystemFontOfSize(25)
                 operateButton.setTitle("＋", forState: UIControlState.Normal)
                 operateButton.setTitleColor(appIncomeColor, forState: UIControlState.Normal)
             case 1:
-                operateButton.tag = minusTag
+                operateButton.tag = buttonTag.minusTag
                 operateButton.titleLabel?.font = UIFont.boldSystemFontOfSize(25)
                 operateButton.setTitle("－", forState: UIControlState.Normal)
                 operateButton.setTitleColor(appIncomeColor, forState: UIControlState.Normal)
             case 2:
-                operateButton.tag = multiplyTag
+                operateButton.tag = buttonTag.multiplyTag
                 operateButton.titleLabel?.font = UIFont.boldSystemFontOfSize(29)
                 operateButton.setTitle("×", forState: UIControlState.Normal)
                 operateButton.setTitleColor(appIncomeColor, forState: UIControlState.Normal)
             case 3:
-                operateButton.tag = confirmTag
+                confirmButton = operateButton
+                operateButton.tag = buttonTag.confirmTag
                 operateButton.titleLabel?.font = UIFont.boldSystemFontOfSize(18)
                 operateButton.setTitle("确定", forState: UIControlState.Normal)
                 operateButton.setTitleColor(appPayColor, forState: UIControlState.Normal)
@@ -146,20 +145,20 @@ class AccountNumberPad: UIView {
         let currButton:NumPadButton = sender as! NumPadButton
         
         switch currButton.tag {
-        case plusTag:
+        case buttonTag.plusTag:
             resultText = resultText.stringByAppendingString("+")
             
-        case minusTag:
+        case buttonTag.minusTag:
             resultText = resultText.stringByAppendingString("-")
             
-        case multiplyTag:
+        case buttonTag.multiplyTag:
             resultText = resultText.stringByAppendingString("×")
             
-        case deleteTag:
+        case buttonTag.deleteTag:
             if resultText.characters.count > 0 {
                 resultText.removeAtIndex(resultText.endIndex.predecessor())
             }
-        case confirmTag:
+        case buttonTag.confirmTag:
             
             print("")
         default:
@@ -169,8 +168,22 @@ class AccountNumberPad: UIView {
         
         if resultText.characters.count > 0 {
             resultLabel?.text = resultText
+            changeConfirmToEqule(true)
         } else {
             resultLabel?.text = "0"
+            changeConfirmToEqule(false)
+        }
+    }
+    
+    func changeConfirmToEqule(isChange:Bool) {
+        if isChange {
+            confirmButton?.titleLabel?.font = UIFont.boldSystemFontOfSize(25)
+            confirmButton?.setTitle("=", forState: UIControlState.Normal)
+            confirmButton?.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        } else {
+            confirmButton?.titleLabel?.font = UIFont.boldSystemFontOfSize(18)
+            confirmButton?.setTitle("确定", forState: UIControlState.Normal)
+            confirmButton?.setTitleColor(appPayColor, forState: UIControlState.Normal)
         }
     }
 }
