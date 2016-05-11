@@ -16,6 +16,8 @@ class HomeViewController: HFBaseViewController,UITableViewDelegate,UITableViewDa
     @IBOutlet weak var incomeLabel: UILabel!
     @IBOutlet weak var topCenterView: UIButton!
     
+    var tableSource:Array<AccountModel> = []
+    
     var progress:KDCircularProgress!
     
     override func viewDidLoad() {
@@ -43,6 +45,8 @@ class HomeViewController: HFBaseViewController,UITableViewDelegate,UITableViewDa
         progress.setColors(appIncomeColor)
         progress.trackColor = appLitePayColor
         topCenterView.addSubview(progress)
+        
+        getTableDataWithMonth("2016-05")
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -55,37 +59,54 @@ class HomeViewController: HFBaseViewController,UITableViewDelegate,UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     
+    func getTableDataWithMonth(monthStr:String)
+    {
+        tableSource = DataStorageService.sharedInstance.getAccountListByMonth(monthStr)
+        tableView.reloadData()
+    }
+    
     // MARK: - TableView
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     //每一块有多少行
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return tableSource.count
     }
     //绘制cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let row = indexPath.row
         
-        if row % 3 == 0 {
-            let dateCell = HomeDateCell(style: UITableViewCellStyle.Default, reuseIdentifier: tableCellIndentifierDate)
-            dateCell.accessoryType = UITableViewCellAccessoryType.None
-            dateCell.payMoneyLabel.text = "￥150"
-            dateCell.dateLabel.text = "\(row + 1)日"
-            dateCell.incomeMoneyLabel.text = "￥1000"
-            return dateCell
+//        if row % 3 == 0 {
+//            let dateCell = HomeDateCell(style: UITableViewCellStyle.Default, reuseIdentifier: tableCellIndentifierDate)
+//            dateCell.accessoryType = UITableViewCellAccessoryType.None
+//            dateCell.payMoneyLabel.text = "￥150"
+//            dateCell.dateLabel.text = "\(row + 1)日"
+//            dateCell.incomeMoneyLabel.text = "￥1000"
+//            return dateCell
+//        } else {
+//            let itemCell = HomeItemCell(style: UITableViewCellStyle.Default, reuseIdentifier: tableCellIndentifierItem)
+//            itemCell.accessoryType = UITableViewCellAccessoryType.None
+//            if row % 2 == 0 {
+//                itemCell.currentType = PayIncomeType.Pay
+//            } else {
+//                itemCell.currentType = PayIncomeType.Income
+//            }
+//            itemCell.payLabel.text = "￥150 日用品"
+//            itemCell.incomeLabel.text = "奖金 ￥1000"
+//            return itemCell
+//        }
+        let itemCell = HomeItemCell(style: UITableViewCellStyle.Default, reuseIdentifier: tableCellIndentifierItem)
+        itemCell.accessoryType = UITableViewCellAccessoryType.None
+        let accountModel = tableSource[row]
+        if accountModel.payOrIncome == "pay" {
+            itemCell.currentType = PayIncomeType.Pay
         } else {
-            let itemCell = HomeItemCell(style: UITableViewCellStyle.Default, reuseIdentifier: tableCellIndentifierItem)
-            itemCell.accessoryType = UITableViewCellAccessoryType.None
-            if row % 2 == 0 {
-                itemCell.currentType = PayIncomeType.Pay
-            } else {
-                itemCell.currentType = PayIncomeType.Income
-            }
-            itemCell.payLabel.text = "￥150 日用品"
-            itemCell.incomeLabel.text = "奖金 ￥1000"
-            return itemCell
+            itemCell.currentType = PayIncomeType.Income
         }
+        itemCell.payLabel.text = "￥" + accountModel.amount! + " " + accountModel.typeName!
+//        itemCell.incomeLabel.text = "奖金 ￥1000"
+        return itemCell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -95,12 +116,12 @@ class HomeViewController: HFBaseViewController,UITableViewDelegate,UITableViewDa
     
     //每个cell的高度
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let row = indexPath.row
-        if row % 3 == 0 {
-            return dateCellHeight
-        } else {
+//        let row = indexPath.row
+//        if row % 3 == 0 {
+//            return dateCellHeight
+//        } else {
             return colorCellHeight
-        }
+//        }
     }
     
     

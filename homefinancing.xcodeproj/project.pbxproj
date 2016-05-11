@@ -13,6 +13,9 @@
 		7B1699F91C77FFEE008F850C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1699F71C77FFEE008F850C /* LaunchScreen.storyboard */; };
 		7B169A111C780A6F008F850C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B169A101C780A6F008F850C /* HomeViewController.swift */; };
 		7B169A1D1C78699B008F850C /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B169A1C1C78699B008F850C /* AppColor.swift */; };
+		B73A18E91CE30ED80089C6B1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A18E81CE30ED80089C6B1 /* StringExtension.swift */; };
+		B73A18ED1CE31D280089C6B1 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A18EC1CE31D280089C6B1 /* DateExtension.swift */; };
+		B73A18EF1CE32CC30089C6B1 /* AccountGroupStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A18EE1CE32CC30089C6B1 /* AccountGroupStruct.swift */; };
 		B7482F9D1CDDEF13007FFD64 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482F931CDDEF13007FFD64 /* FMDatabase.m */; };
 		B7482F9E1CDDEF13007FFD64 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482F951CDDEF13007FFD64 /* FMDatabaseAdditions.m */; };
 		B7482F9F1CDDEF13007FFD64 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B7482F971CDDEF13007FFD64 /* FMDatabasePool.m */; };
@@ -66,6 +69,9 @@
 		7B1699FA1C77FFEE008F850C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B169A101C780A6F008F850C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7B169A1C1C78699B008F850C /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		B73A18E81CE30ED80089C6B1 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		B73A18EC1CE31D280089C6B1 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		B73A18EE1CE32CC30089C6B1 /* AccountGroupStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGroupStruct.swift; sourceTree = "<group>"; };
 		B7482F921CDDEF13007FFD64 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		B7482F931CDDEF13007FFD64 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		B7482F941CDDEF13007FFD64 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -220,13 +226,14 @@
 			name = StorageBase;
 			sourceTree = "<group>";
 		};
-		B7482FB11CDDF2C9007FFD64 /* DBModel */ = {
+		B7482FB11CDDF2C9007FFD64 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B7482FB21CDDF3B5007FFD64 /* AccountModel.swift */,
 				B7482FC11CDEE625007FFD64 /* AccountTypeModel.swift */,
+				B73A18EE1CE32CC30089C6B1 /* AccountGroupStruct.swift */,
 			);
-			name = DBModel;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		B7482FB61CDDF762007FFD64 /* DBManager */ = {
@@ -309,7 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				B7482FC31CDEE6A9007FFD64 /* StorageService */,
-				B7482FB11CDDF2C9007FFD64 /* DBModel */,
+				B7482FB11CDDF2C9007FFD64 /* Model */,
 				B7EDDB721C9BD9210023DD9C /* Cells */,
 				B7EDDB711C9BD8E10023DD9C /* UI */,
 				7B169A101C780A6F008F850C /* HomeViewController.swift */,
@@ -357,6 +364,8 @@
 			children = (
 				B7EE8E471CD7986700D4193F /* UIBarExtension.swift */,
 				B7482FB91CDE0165007FFD64 /* NSUserDefaultsExtension.swift */,
+				B73A18E81CE30ED80089C6B1 /* StringExtension.swift */,
+				B73A18EC1CE31D280089C6B1 /* DateExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -446,6 +455,7 @@
 				B7EE8E3D1CD78DA900D4193F /* PNLineChartData.m in Sources */,
 				B7482FA71CDDEF5A007FFD64 /* FMDatabaseManagerClient.m in Sources */,
 				B770E4F01CBB74890091732C /* BudgetViewController.swift in Sources */,
+				B73A18EF1CE32CC30089C6B1 /* AccountGroupStruct.swift in Sources */,
 				B770E4EC1CB511AA0091732C /* HomeDateCell.swift in Sources */,
 				B770E4E51CB50A490091732C /* HFBaseTableView.swift in Sources */,
 				B7482FAE1CDDF144007FFD64 /* GCDBModel.m in Sources */,
@@ -464,10 +474,12 @@
 				B7482FC71CDF07B4007FFD64 /* AccountNumberPad.swift in Sources */,
 				B7EE8E0F1CD781E000D4193F /* PieChartStatisticViewController.swift in Sources */,
 				B7482FC01CDE4564007FFD64 /* AccountTypeSquareButton.swift in Sources */,
+				B73A18E91CE30ED80089C6B1 /* StringExtension.swift in Sources */,
 				B7EE8E481CD7986700D4193F /* UIBarExtension.swift in Sources */,
 				B7482F9E1CDDEF13007FFD64 /* FMDatabaseAdditions.m in Sources */,
 				B7482FA11CDDEF13007FFD64 /* FMResultSet.m in Sources */,
 				B7EE8E3F1CD78DA900D4193F /* PNPieChart.m in Sources */,
+				B73A18ED1CE31D280089C6B1 /* DateExtension.swift in Sources */,
 				B7482F9F1CDDEF13007FFD64 /* FMDatabasePool.m in Sources */,
 				B7482FB31CDDF3B5007FFD64 /* AccountModel.swift in Sources */,
 				B7EE8E381CD78DA900D4193F /* PNChartLabel.m in Sources */,

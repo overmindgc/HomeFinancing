@@ -51,4 +51,41 @@ class DataStorageService: GCBaseStorage {
         return typeArray
     }
     
+    internal func addAccountToDatabase(accountModel:AccountModel) {
+        self.insertToTableWithModel(accountModel)
+    }
+    
+    func getAccountListByMonth(monthStr:String) -> Array<AccountModel> {
+        let resultArr = self.selectModelArrayByClass(object_getClass(AccountModel()), params: ["accountMonthDate": monthStr], orderBy: "updateDate", isDesc: true)
+        return resultArr as! Array<AccountModel>
+    }
+    
+    internal func getHomeTableSourceListByMonth(monthStr:String) -> Array<AccountGroupStruct> {
+        let accountModelArray = getAccountListByMonth(monthStr)
+        
+        var groupStructArray:Array<AccountGroupStruct> = []
+        var groupStruct:AccountGroupStruct?
+        for accountModel in accountModelArray {
+            if (groupStruct == nil) {
+                groupStruct = AccountGroupStruct(payAmount: "",incomeAmount: "",centerDateStr: dayCnStringWithDateStr(accountModel.accountDate!)!,dayDateStr: accountModel.accountDate!,accountModelArray: [])
+                
+                groupStructArray.append(groupStruct!)
+            }
+        }
+        
+        return groupStructArray
+    }
+    
+    private func dayCnStringWithDateStr(dateStr:String) -> String? {
+        var dayCnString:String?
+        if dateStr.characters.count > 9 {
+            if NSDate.dateDayStringWithStandardFormat(NSDate()) == dateStr {
+                dayCnString = "今天"
+            } else {
+                let offset = dateStr.startIndex.advancedBy(8)
+                dayCnString = dateStr.substringFromIndex(offset)
+            }
+        }
+        return dayCnString
+    }
 }

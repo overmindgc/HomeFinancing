@@ -10,6 +10,7 @@ class AccountModel: GCDBModel {
     var id:String?
     var bookId:String?
     var accountDate:String?
+    var accountMonthDate:String?
     var createDate:String?
     var updateDate:String?
     var typeId:String?

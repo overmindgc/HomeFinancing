@@ -25,6 +25,8 @@ class CreateAccountViewController: HFBaseViewController {
     var lastSelectPayTypeIndex:Int = -1
     var lastSelectIncomeTypeIndex:Int = -1
     
+    var numPadView:AccountNumberPad?
+    
     override func viewDidLoad() {
         dateButton.layer.borderWidth = 1
         dateButton.layer.borderColor = UIColor.whiteColor().CGColor
@@ -119,9 +121,30 @@ class CreateAccountViewController: HFBaseViewController {
     }
     
     func initNumberPadView() {
-        let numPadView = AccountNumberPad(frame: CGRectMake(0,SCREEN_HEIGHT - AccountNumberPad.padHeight,SCREEN_WIDTH,AccountNumberPad.padHeight))
-        
-        self.view.addSubview(numPadView)
+        numPadView = AccountNumberPad(frame: CGRectMake(0,SCREEN_HEIGHT - AccountNumberPad.padHeight,SCREEN_WIDTH,AccountNumberPad.padHeight))
+        numPadView?.confirmClosure = confirmResult
+        self.view.addSubview(numPadView!)
+    }
+    
+    func confirmResult(result:Int) {
+        if result > 0 {
+            let accountModel:AccountModel = AccountModel()
+            let nowDate = NSDate()
+            accountModel.id = String(nowDate.timeIntervalSince1970)
+            accountModel.bookId = "1"
+            accountModel.accountDate = NSDate.dateDayStringWithStandardFormat(nowDate)
+            accountModel.accountMonthDate = NSDate.dateMonthStringWithStandardFormat(nowDate)
+            accountModel.createDate = NSDate.dateFullStringWithStandardFormat(nowDate)
+            accountModel.updateDate = NSDate.dateFullStringWithStandardFormat(nowDate)
+            accountModel.typeId = "2001"
+            accountModel.typeName = "一般支出"
+            accountModel.amount = String(result)
+            accountModel.menberId = "001"
+            accountModel.menberName = "全家"
+            accountModel.payOrIncome = "pay"
+            
+            DataStorageService.sharedInstance.addAccountToDatabase(accountModel)
+        }
     }
     
     //MARK: - Functions
@@ -133,6 +156,8 @@ class CreateAccountViewController: HFBaseViewController {
         let isSelected = typeButton.selectedSquare
         let selectIndex = typeButton.buttonIndex
         let buttenType = typeButton.accountType
+        
+        numPadView?.changeTopBarLabelText(typeButton.buttonTitle!, type: buttenType)
 
         if buttenType == AccountType.pay {
             if lastSelectPayTypeIndex != -1 {

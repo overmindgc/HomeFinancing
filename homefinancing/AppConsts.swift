@@ -10,3 +10,4 @@ import UIKit.UIScreen
 
 let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
 let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
+let SCREEN_SCALE = UIScreen.mainScreen().scale
